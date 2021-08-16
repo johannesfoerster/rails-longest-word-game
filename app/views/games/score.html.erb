@@ -1,0 +1,13 @@
+<h1>Result</h1>
+
+<% if @included %>
+  <% if @english_word %>
+    <p><strong>seeesh!</strong> <%= @word %> that shits buzzin buzzin</p>
+  <% else %>
+    <p>Sorry but <strong><%= @word %></strong> you are a retard</p>
+  <% end %>
+<% else %>
+  <p>Shut up<strong><%= @word %></strong> can't be built out of <%= @letters.join(", ")%></p>
+<% end %>
+
+<%= link_to "Play again", new_path %>
